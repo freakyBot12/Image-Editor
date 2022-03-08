@@ -1,0 +1,90 @@
+312CA_Selea_Tudor_Octavian_Tema3
+
+LOAD:
+
+	-la inceput, verific daca este deja o poza incarcata in
+	memoria programului. Daca este, eliberez memoria pentru a
+	incarca urmatoarea poza
+
+	-in functie de format, incarc imaginea in matricea "img"
+
+	-dupa incarcarea pozei, ii selectez intreaga suprafata
+	pentru a o prelucra
+
+
+SELECT:
+
+	-daca primul argument este "ALL", selectez intreaga imagine
+
+	-daca primul argument este diferit de "ALL", verific daca
+	acesta si urmatoarele 3 argumente sunt numere sau daca exista
+
+	-daca cele 4 argumente sunt numere, verific daca sunt date in 
+	ordine (x1 < x2 si y1 < y2). De asemenea, verific daca selectia
+	depaseste dimensiunile imaginii sau daca este unidimensionala
+	(o linie sau un pixel/punct)
+
+
+GRAYSCALE:
+
+	-verific daca exista o imagine incarcata in memoria programului
+	si daca imaginea nu este color. Daca programul trece de verificari,
+	aplica filtrul.
+
+
+SEPIA:
+
+	-se repeta pasii de la GRAYSCALE
+
+
+SAVE:
+
+	-verific daca exista o imagine incarcata in memoria programului
+	inainte de salvare
+
+	-daca doresc sa salvez din ascii in binar sau din binar in ascii,
+	modific formatul imaginii pentru a realiza conversia
+
+EXIT:
+
+	-verific daca exista o imagine incarcata in memoria programului
+	Daca exista, eliberez memoria
+
+	-egalez variabila "exit" cu 1 pentru a iesi din bucla "while"
+
+CROP:
+
+	-verific daca exista o imagine incarcata in memoria programului
+
+	-daca exista, creez o copie a imaginii intr-o matrice auxiliara.
+	Redimensionez imaginea initiala astfel incat sa aiba dimensiunile
+	suprafetei selectate. Copiez suprafata selectata din matricea
+	auxiliara in matricea noii imagini. Eliberez memoria alocata
+	pentru matricea auxiliara si selectez noua imagine
+
+	-procedeul de mai sus se aplica atat pentru imaginile color, cat
+	si pentru cele gri
+
+ROTATE:
+
+	-in cazul in care intreaga imagine este selectata, creez o matrice
+	auxiliara in care voi stoca imaginea rotita. Redimensionez imaginea
+	initiala. Transpun matricea auxiliara in matricea noii poze si
+	eliberez memoria alocata pentru matricea auxiliara. Apoi selectez
+	intreaga imagine
+
+	-in cazul in care este selectata o subimagine patratica, creez o
+	matrice auxiliara in care stochez subimaginea rotita. Apoi transpun
+	subimaginea rotita in imaginea initiala si eliberez memoria alocata
+	pentru matricea auxiliara
+
+	-pasii de mai sus se aplica atat pentru imaginile color, cat si
+	pentru imaginile gri
+
+UNGHI_LOAD_ROTATE: 
+
+	-verific daca unghiul citit este divizibil cu 90 si daca exista
+	o imagine incarcata in memorie
+
+   Daca programul nu intra in niciuna din functiile de mai sus, comanda este
+invalida!  
